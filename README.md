@@ -1,2 +1,3 @@
-# desafio_banco
- desafio de projeto - criando um sistema bancario
+# Desafio_banco
+ Desafio de projeto - criando um sistema bancario - Curso Potência Tech powered by iFood | Ciência de Dados
+ 
