@@ -8,11 +8,11 @@ menu = """
         """
 
 saldo = 0
-limite_saque = 500
+LIMITE_SAQUE = 500
 extrato = {}
 numero_saques = 0
 total_extrato = 0
-LIMITE_SAQUES = 3
+LIMITE_NUMERO_SAQUES = 3
 
 
 while True:
@@ -25,7 +25,7 @@ while True:
         else:
             saldo += deposito
             print(f"\nDepósito efetuado com sucesso! Novo saldo:R${saldo:.2f}")
-            extrato[total_extrato] = f"Depósito -R${deposito:.2f}"
+            extrato[total_extrato] = f"Depósito +R${deposito:.2f}"
             total_extrato += 1
     
     elif selecionar == 2:
@@ -33,9 +33,9 @@ while True:
 
         if saque > saldo:
             print("\nSaldo insuficiente.")
-        elif saque > limite_saque:
+        elif saque > LIMITE_SAQUE:
             print("\nSaque excedeu o limite.")
-        elif numero_saques > 2:
+        elif numero_saques >= LIMITE_NUMERO_SAQUES:
             print("\nNumero de saques atingido.")
         else:
             saldo -= saque
